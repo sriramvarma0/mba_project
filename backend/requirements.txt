@@ -1,0 +1,10 @@
+flask
+flask-cors
+flask-jwt-extended
+sqlalchemy
+pymysql
+cryptography
+mlxtend
+pandas
+numpy
+requests
