@@ -115,6 +115,29 @@ Example:
 python start_all.py --install-deps --generate-data
 ```
 
+## Database Setup + Migration Script
+
+Use the root script to create the database and import SQL dump with custom MySQL credentials:
+
+```powershell
+cd c:\codebase\new_projects\mba_project
+python setup_db_migration.py --mysql-user root --mysql-password YOUR_PASSWORD --db-name mba_ecommerce
+```
+
+Optional flags:
+
+- `--dump-file data/mba_ecommerce_full_dump.sql` to use a different dump file path.
+- `--skip-import` to only create the database.
+- `--mysql-host` and `--mysql-port` for remote/local custom MySQL servers.
+- `--mysql-client-path "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe"` if `mysql` is not in PATH.
+- `--write-env-files` to generate `backend_env.ps1` and `backend_env.cmd` with current credentials.
+
+Example with env helper files:
+
+```powershell
+python setup_db_migration.py --mysql-user root --mysql-password YOUR_PASSWORD --write-env-files
+```
+
 ## API Endpoints
 
 ### Auth
