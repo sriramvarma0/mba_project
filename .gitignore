@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local environment helpers (do not commit secrets)
+backend_env.ps1
+backend_env.cmd
+
+# Virtual environments
+backend/venv/
